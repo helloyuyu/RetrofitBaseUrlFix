@@ -1,0 +1,42 @@
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+dependencies {
+//    implementation project(":annotation")
+    // gradle sdk
+    implementation gradleApi()
+    // groovy sdk
+    implementation localGroovy()
+    // javassist
+    implementation 'org.javassist:javassist:3.25.0-GA'
+    // Android gradle
+    implementation 'com.android.tools.build:gradle:3.4.1'
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //junit
+    testImplementation 'junit:junit:4.12'
+}
+
+//打包到本地或者远程Maven库
+group = "com.helloyuyu.baseurlfix"
+version = "1.0.4"
+sourceSets {
+    main {
+        java {
+            srcDir("../annotation/src/main/java")
+        }
+    }
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+            //本地的Maven地址设置为E:/Maven
+            repository(url: uri(this.project.getRootDir().absolutePath + "/repo"))
+        }
+    }
+}
