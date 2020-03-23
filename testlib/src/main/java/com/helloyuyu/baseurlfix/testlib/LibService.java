@@ -1,4 +1,4 @@
-package com.holloyuyu.baseurlfix.testlib;
+package com.helloyuyu.baseurlfix.testlib;
 
 import com.helloyuyu.baseurlfix.annotation.BaseUrl;
 import retrofit2.http.GET;

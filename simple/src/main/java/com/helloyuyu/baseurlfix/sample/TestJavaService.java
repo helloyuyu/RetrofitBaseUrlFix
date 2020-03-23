@@ -1,7 +1,9 @@
 package com.helloyuyu.baseurlfix.sample;
 
 import android.arch.lifecycle.LiveData;
+
 import com.helloyuyu.baseurlfix.annotation.BaseUrl;
+
 import retrofit2.http.GET;
 import retrofit2.http.HTTP;
 

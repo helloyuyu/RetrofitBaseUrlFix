@@ -1,3 +1,4 @@
-include ':simple', ':testlib'
+include ':simple'
+include ':testlib'
 include ':annotation'
 include ':gradle-plugin'
