@@ -1,0 +1,3 @@
+# RetrofitBaseUrlFix
+Retrofit定义多个BaseUrl的更方便的插件
+
