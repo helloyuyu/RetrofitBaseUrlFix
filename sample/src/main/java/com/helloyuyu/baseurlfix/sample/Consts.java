@@ -11,4 +11,6 @@ public class Consts {
     public static final String TEST_PATH_HTTP = "/test/http";
 
     public static final String TEST_PATH_GET = "/test/get";
+
+    public static final String TEST_PAGE_DELETE = "/test/delete";
 }

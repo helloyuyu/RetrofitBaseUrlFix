@@ -3,7 +3,7 @@ apply plugin: 'maven'
 apply plugin: 'java'
 
 dependencies {
-    implementation project(":annotation")
+//    implementation project(":annotation")
     // gradle sdk
     implementation gradleApi()
     // groovy sdk
@@ -20,14 +20,14 @@ dependencies {
 
 //打包到本地或者远程Maven库
 group = "com.helloyuyu.baseurlfix"
-version = "1.0.4"
-//sourceSets {
-//    main {
-//        java {
-//            srcDir("../annotation/src/main/java")
-//        }
-//    }
-//}
+version = "1.0.0"
+sourceSets {
+    main {
+        java {
+            srcDir("../annotation/src/main/java")
+        }
+    }
+}
 uploadArchives {
     repositories {
         mavenDeployer {

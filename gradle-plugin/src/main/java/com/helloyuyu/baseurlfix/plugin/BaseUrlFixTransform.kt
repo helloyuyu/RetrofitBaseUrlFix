@@ -1,10 +1,10 @@
 package com.helloyuyu.baseurlfix.plugin
 
-import com.android.SdkConstants
-import com.android.build.api.transform.*
-import com.android.build.gradle.internal.pipeline.TransformManager
+import com.android.build.api.transform.Format
+import com.android.build.api.transform.QualifiedContent
+import com.android.build.api.transform.Transform
+import com.android.build.api.transform.TransformInvocation
 import com.android.utils.FileUtils
-import com.google.common.io.ByteStreams
 import com.helloyuyu.baseurlfix.annotation.BaseUrl
 import javassist.ClassPool
 import javassist.CtMethod
@@ -13,11 +13,6 @@ import javassist.bytecode.annotation.Annotation
 import javassist.bytecode.annotation.StringMemberValue
 import java.io.File
 import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.util.zip.ZipEntry
-import java.util.zip.ZipInputStream
-import java.util.zip.ZipOutputStream
 
 /**
  * @author xjs
@@ -166,6 +161,6 @@ class BaseUrlFixTransform : Transform() {
     }
 
     private fun log(msg: String) {
-        System.out.println("BURT:----$msg")
+        println("BURT:----$msg")
     }
 }
